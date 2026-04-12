@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishabh Prajapat</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+</head>
+<body class="bg-[#fafafa] text-[#1d1d1f] antialiased">
+
+    <nav class="fixed top-0 w-full z-50 bg-[#fafafa]/80 backdrop-blur-xl border-b border-black/5">
+        <div class="max-w-[1000px] mx-auto flex justify-between items-center h-[52px] px-6">
+            <div class="font-semibold tracking-tight text-[19px]">Rishabh</div>
+            <div class="flex space-x-8 text-[12px] font-normal text-[#1d1d1f]/80">
+                <a href="#work" class="hover:text-black transition-colors">Work</a>
+                <a href="#about" class="hover:text-black transition-colors">About</a>
+                <a href="#contact" class="hover:text-black transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="h-screen flex flex-col items-center justify-center text-center px-6">
+    <h1 class="reveal-title text-[56px] md:text-[80px] font-semibold tracking-tight leading-[1.1] mb-6">
+        Hi, I'm Rishabh.
+    </h1>
+
+    <p class="hero-description text-[21px] md:text-[24px] text-[#86868b] max-w-[600px] mx-auto font-medium leading-relaxed mb-10 reveal">
+        I build intelligent systems using AI and Machine Learning.
+    </p>
+
+    <div class="reveal-group">
+        <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
+            <a href="resume.pdf" download class="bg-[#0071e3] text-white px-8 py-3 rounded-full text-[17px] font-medium hover:bg-[#0077ed] transition-all flex items-center shadow-sm">
+                <i class="fas fa-download mr-2 text-[14px]"></i> Download Resume
+            </a>
+            <a href="#work" class="text-[#0066cc] text-[17px] font-medium hover:underline">
+                View Work <span class="ml-1 text-[12px]">→</span>
+            </a>
+        </div>
+
+        <div class="flex items-center justify-center space-x-8 text-[#86868b]">
+            <a href="#" class="hover:text-black transition-colors text-[14px] flex items-center"><i class="fab fa-linkedin mr-2"></i> LinkedIn</a>
+            <a href="#" class="hover:text-black transition-colors text-[14px] flex items-center"><i class="fab fa-github mr-2"></i> GitHub</a>
+            <a href="#" class="hover:text-black transition-colors text-[14px] flex items-center"><i class="fab fa-youtube mr-2"></i> YouTube</a>
+        </div>
+    </div>
+</section>
+
+        <section id="work" class="max-w-[1200px] mx-auto px-6 py-32">
+            <h2 class="text-[40px] md:text-[56px] font-semibold tracking-tight mb-20 text-center">Featured Work.</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="md:col-span-2 group reveal">
+                    <div class="bg-white rounded-[28px] p-12 md:p-20 border border-black/5 flex flex-col items-center text-center overflow-hidden transition-all duration-700 hover:shadow-xl hover:shadow-black/5">
+                        <span class="text-[#bf4800] font-semibold text-[14px] uppercase tracking-wider mb-4">Machine Learning</span>
+                        <h3 class="text-[32px] md:text-[48px] font-semibold tracking-tight mb-6">Fake News Detector</h3>
+                        <p class="text-[#86868b] text-[19px] max-w-[500px] mb-8">A sophisticated NLP engine designed to identify misinformation with precision.</p>
+                        <div id="fake_news" class="w-full max-w-[700px] aspect-video bg-[#f5f5f7] rounded-xl overflow-hidden mt-4 group-hover:scale-[1.02] transition-transform duration-700">
+                             </div>
+                    </div>
+                </div>
+
+                <div class="group reveal">
+                    <div class="bg-white rounded-[28px] p-10 h-full border border-black/5 flex flex-col transition-all duration-700 hover:shadow-xl hover:shadow-black/5">
+                        <h3 class="text-[24px] font-semibold mb-4">Email Spam Classifier</h3>
+                        <p class="text-[#86868b] text-[17px] mb-6">Streamlining communication through Bayesian classification algorithms.</p>
+                        <a href="#" class="text-[#0066cc] mt-auto font-medium hover:underline">GitRepo →</a>
+                    </div>
+                </div>
+
+                <div class="group reveal">
+                    <div class="bg-white rounded-[28px] p-10 h-full border border-black/5 flex flex-col transition-all duration-700 hover:shadow-xl hover:shadow-black/5">
+                        <h3 class="text-[24px] font-semibold mb-4">Movie Recommandation system</h3>
+                        <p class="text-[#86868b] text-[17px] mb-6">Helping you discover the perfect movie with intelligent algorithms.</p>
+                        <a href="#" class="text-[#0066cc] mt-auto font-medium hover:underline">GitRepo →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="bg-white py-32 px-6">
+            <div class="max-w-[800px] mx-auto text-center reveal">
+                <h2 class="text-[40px] md:text-[56px] font-semibold tracking-tight mb-10">Simple is powerful.</h2>
+                <p class="text-[21px] text-[#86868b] leading-relaxed mb-8">
+                    My approach to AI/ML is rooted in clarity. I believe that the most advanced technologies should feel invisible and effortless to the user.
+                </p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-10 border-t border-black/5">
+                    <div><span class="block text-[24px] font-semibold">Python</span><span class="text-[#86868b] text-[14px]">Architect</span></div>
+                    <div><span class="block text-[24px] font-semibold">NLP</span><span class="text-[#86868b] text-[14px]">Specialist</span></div>
+                    <div><span class="block text-[24px] font-semibold">Machine Learning</span><span class="text-[#86868b] text-[14px]">Power</span></div>
+                    <div><span class="block text-[24px] font-semibold">JS</span><span class="text-[#86868b] text-[14px]">Interface</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-32 px-6 bg-[#fafafa]">
+            <div class="max-w-[500px] mx-auto text-center reveal">
+                <h2 class="text-[40px] font-semibold tracking-tight mb-4">Get in touch.</h2>
+                <p class="text-[#86868b] mb-12 text-[19px]">I’m always open to discussing new opportunities.</p>
+                <form  action="/submit" class="space-y-4" method="POST">
+                    <input type="text" placeholder="Name" name="user_name" class="w-full p-4 rounded-xl bg-white border border-black/5 outline-none focus:border-[#0071e3] transition-colors" required>
+                    <input type="email" placeholder="Email" name="user_mail" class="w-full p-4 rounded-xl bg-white border border-black/5 outline-none focus:border-[#0071e3] transition-colors" required>
+                    <textarea placeholder="Message" rows="5" name="user_msg" class="w-full p-4 rounded-xl bg-white border border-black/5 outline-none focus:border-[#0071e3] transition-colors" required></textarea>
+                    <button type="submit" class="w-full bg-black text-white py-4 rounded-xl font-medium text-[17px] hover:bg-[#1d1d1f] transition-all">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main> 
+
+    <footer class="py-16 px-6 border-t border-black/5 text-center bg-white">
+    <div class="max-w-[1000px] mx-auto">
+        <div class="flex justify-center space-x-10 mb-8 text-[#1d1d1f]">
+            <a href="https://www.linkedin.com/in/rishabh-prajapat-a251083b0/" class="text-[20px] hover:opacity-60 transition-opacity"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/rishabhprajapat11070" class="text-[20px] hover:opacity-60 transition-opacity"><i class="fab fa-github"></i></a>
+            <a href="https://www.youtube.com/@rishabh_09566" class="text-[20px] hover:opacity-60 transition-opacity"><i class="fab fa-youtube"></i></a>
+        </div>
+        <p class="text-[#86868b] text-[12px] font-normal tracking-tight">
+            Copyright © 2026 Rishabh Prajapat. Designed with Apple-inspired principles.
+        </p>
+    </div>
+</footer>
+
+    <script src="{{ url_for('static', filename='js/script2.js') }}"></script>
+</body>
+</html>
