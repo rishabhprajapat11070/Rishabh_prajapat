@@ -1,5 +1,6 @@
 from flask import Flask,render_template,request,Response,redirect,url_for
 import os
+import time 
 import mysql.connector
 import time
 
@@ -17,7 +18,7 @@ app = Flask(__name__)
 
 @app.route("/",methods=['GET','POST'])
 def home():
-    return render_template("portfoilo.html")
+    return render_template("portfolio.html")
 
 @app.route("/submit",methods=['POST'])
 def Submit():
@@ -37,7 +38,12 @@ def Submit():
         db.commit()
         db.close()
 
-    return render_template("portfoilo.html")
+    return render_template("thanks.html")
+
+@app.route("/portfolio")
+def portfolio():
+    return render_template("portfolio.html")
+
 
 
 

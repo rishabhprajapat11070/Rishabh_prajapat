@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="3;url=index.html">
+    <title>Thank You</title>
+    <style>
+        :root {
+            --bg-color: #fbfbfd;
+            --text-main: #1d1d1f;
+            --text-secondary: #86868b;
+            --accent-green: #27ae60;
+            /* Using your preferred warm minimalist tones */
+            --warm-cream: #f5f5f0;
+            --sage-accent: #87a38d;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+            background-color: var(--warm-cream); /* Warm Minimalist Base */
+            color: var(--text-main);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .content-wrapper {
+            text-align: center;
+            max-width: 600px;
+            padding: 20px;
+            animation: fadeIn 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .icon-circle {
+            width: 80px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto 30px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        }
+
+        .checkmark {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: block;
+            stroke-width: 2;
+            stroke: var(--sage-accent);
+            stroke-miterlimit: 10;
+            animation: scale 0.3s ease-in-out 0.5s both;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -0.003em;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 21px;
+            line-height: 1.38105;
+            font-weight: 400;
+            letter-spacing: .011em;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+        }
+
+        .progress-bar {
+            width: 200px;
+            height: 2px;
+            background: #d2d2d7;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            border-radius: 2px;
+        }
+
+        .progress-fill {
+            position: absolute;
+            height: 100%;
+            width: 0%;
+            background: var(--text-main);
+            animation: load 3s linear forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes load {
+            0% { width: 0%; }
+            100% { width: 100%; }
+        }
+
+        @keyframes scale {
+            0%, 100% { transform: none; }
+            50% { transform: scale3d(1.1, 1.1, 1); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content-wrapper">
+        <div class="icon-circle">
+            <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                <circle cx="26" cy="26" r="25" fill="none"/>
+                <path fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+            </svg>
+        </div>
+        
+        <h1>Thank to connect</h1>
+        <p>Your details have been securely sent. <br> Returning to the main site shortly.</p>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+    </div>
+
+<script>
+    console.log("JS loaded");
+
+    setTimeout(() => {
+        window.location.href = "/portfolio";
+    }, 2000);
+</script>
+
+</body>
+</html>
