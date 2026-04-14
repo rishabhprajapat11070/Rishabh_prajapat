@@ -1,17 +1,19 @@
 from flask import Flask,render_template,request,Response,redirect,url_for
 import os
 import time 
-import mysql.connector
+import psycopg2
 import time
 
 
 def get_db():
-    return mysql.connector.connect(
-        host="localhost",
-        user="root",
-        password="rishabhprajapat11070",
-        database="user_data"
+    conn = psycopg2.connect(
+        host="db.endgtpkrhllvqqqehozg.supabase.co",
+        database="postgres",
+        user="postgres",
+        password="Rishabhprajapat11070@",
+        port="5432"
     )
+    return conn
     
 
 app = Flask(__name__)
@@ -28,9 +30,9 @@ def Submit():
         userMSG = request.form.get("user_msg")
         
         db = get_db()
-        cursor = db.cursor()
+        cur = db.cursor()
 
-        cursor.execute(
+        cur.execute(
             "INSERT INTO contacts (name, email, message) VALUES (%s, %s, %s)",
             (user, mail, userMSG)
         )
