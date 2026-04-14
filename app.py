@@ -22,13 +22,14 @@ app = Flask(__name__)
 def home():
     return render_template("portfolio.html")
 
+
 @app.route("/submit",methods=['POST'])
 def Submit():
-    if request.method == "POST":
+
+    try:
         user = request.form.get("user_name")
         mail = request.form.get("user_mail")
         userMSG = request.form.get("user_msg")
-        
         db = get_db()
         cur = db.cursor()
 
@@ -40,7 +41,10 @@ def Submit():
         db.commit()
         db.close()
 
-    return render_template("thanks.html")
+        return render_template("thanks.html")
+    except Exception as e:
+        return f"error {e}"
+
 
 @app.route("/portfolio")
 def portfolio():
